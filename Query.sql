@@ -15,7 +15,7 @@ go
 insert into Imagenes (Descripcion, Binario)
 select 'Imagen 1', BulkColumn
 from OPENROWSET(
-    BULK 'C:\Ramiro\Plan de carrera\Promocion Sr\Imagenes\gatito.png',
+    BULK 'C:\Ramiro\Plan de carrera\Promocion Sr\SQL\Imagenes\gatito.png',
     SINGLE_BLOB
 ) as img;
 go
@@ -23,7 +23,7 @@ go
 insert into Imagenes (Descripcion, Binario)
 select 'Imagen 2', BulkColumn
 from OPENROWSET(
-    BULK 'C:\Ramiro\Plan de carrera\Promocion Sr\Imagenes\perrito.png',
+    BULK 'C:\Ramiro\Plan de carrera\Promocion Sr\SQL\Imagenes\perrito.png',
     SINGLE_BLOB
 ) as img;
 go
@@ -38,10 +38,10 @@ go
 
 
 backup database DB_Promocion_Sr
-to disk = 'C:\Ramiro\Plan de carrera\Promocion Sr\DB_Promocion_Sr.bak';
+to disk = 'C:\Ramiro\Plan de carrera\Promocion Sr\SQL\DB_Promocion_Sr.bak';
 go
 
 -- Usar esto para restaurar la base de datos desde el backup
 
 -- RESTORE DATABASE DB_Promocion_Sr_Restore
--- FROM DISK = 'C:\Ramiro\Plan de carrera\Promocion Sr\DB_Promocion_Sr.bak';
+-- FROM DISK = 'C:\Ramiro\Plan de carrera\Promocion Sr\SQL\DB_Promocion_Sr.bak';
