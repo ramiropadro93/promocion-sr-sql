@@ -45,3 +45,14 @@ go
 
 -- RESTORE DATABASE DB_Promocion_Sr_Restore
 -- FROM DISK = 'C:\Ramiro\Plan de carrera\Promocion Sr\SQL\DB_Promocion_Sr.bak';
+
+-- Usar esto para convertir representación de imagen en base 64: 
+
+--SELECT CAST('' as xml).value(
+--    'xs:base64Binary(sql:column("Binario"))',
+--    'varchar(max)'
+--)
+--FROM Imagenes
+--WHERE Id = 1;
+
+-- Abrir https://base64.guru/converter/decode/image y pegar resultado de consulta anterior para visualizar imagen
